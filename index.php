@@ -14,6 +14,7 @@
     </head>
     <body>
         <div id="scene">
+            <div id="back" data-depth="0.0"><img src="assets/images/fondacc.png" width="100%" height="100%"></div>
     <div data-depth="1.5"><img src="assets/images/latios.png"></div>
   <div data-depth="1.7"><img src="assets/images/latias.png"></div>
   <div data-depth="0.2"><img src="assets/images/nuage1.png"></div>
