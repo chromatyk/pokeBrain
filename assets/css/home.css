@@ -1,7 +1,10 @@
 #homePanel{
     padding-top: 20px;
-    margin-top: 7%;
     background-color: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    z-index: 2;
+    top: 15%;
+    left: 20%;
 }
 #homeLogo{
     display: block;
@@ -30,7 +33,7 @@ body .btn-bg.Pokemon .btn-group .ball button {
   position: relative;
 }
 body .btn-bg.Pokemon .btn-group .ball button:hover {
-  border-color: #ffd740;
+  border-color: #4C89B3;
 }
 body .btn-bg.Pokemon .btn-group .ball button:hover .pokemon-ball::before {
   transform: translate3d(0, -100%, 0);
@@ -73,7 +76,7 @@ body .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
   left: 0;
   width: 100%;
   height: 50%;
-  background: #ef594f;
+  background: transparent;
   transform: translate3d(0, 0, 0);
   transition: transform 0.25s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
@@ -115,12 +118,12 @@ body .btn-bg.Pokemon .btn-group .ball button a span::before {
   content: attr(data-letters);
   left: 0;
   width: 100%;
-  color: #fff;
+  color: #50514f;
   transition: transform 0.5s;
 }
 body .btn-bg.Pokemon .btn-group .ball button a span:first-child::before {
   top: 0;
-  color: #ef594f;
+  color: #50514f;
   transform: translate3d(0, 100%, 0);
 }
 body .btn-bg.Pokemon .btn-group .ball button a span:nth-child(2) {
@@ -168,7 +171,7 @@ body .btn-bg.Pokemon .btn-group .ball button a span:nth-child(2)::before {
   color: #fff;
 }
 .btn-mention span {
-  font-size: 1.2em;
+  font-size: 0.5em;
   font-weight: 600;
 }
 button {
@@ -182,7 +185,7 @@ button {
   padding: 1rem 3rem 1rem 3rem;
   text-transform: uppercase;
   font-family: "Lato";
-  font-size: 1.5em;
+  font-size: 0.9em;
 }
 button a {
   text-decoration: none;

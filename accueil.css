@@ -5,6 +5,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
-
+#scene{
+    z-index: 1;
+}
