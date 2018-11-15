@@ -1,16 +1,18 @@
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 html{
-    overflow-x: hidden;
+    max-height: 100px;
 }
 #homePanel{
     padding-top: 20px;
     background-color: rgba(255, 255, 255, 0.1);
-    position: fixed;
+    position: absolute;
     z-index: 2;
     top: 15%;
     left: 20%;
+    overflow-y: visible;
 }
 #homeLogo{
     display: block;
@@ -70,7 +72,6 @@ html{
   content: 'Go!';
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
   z-index: 9;
 }
@@ -80,16 +81,11 @@ html{
   content: '';
   top: 0;
   left: 0;
-  width: 100%;
   height: 50%;
   background: transparent;
   transform: translate3d(0, 0, 0);
   transition: transform 0.25s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
- .btn-bg.Pokemon .btn-group .ball button .pokemon-ball::after {
-  top: 50%;
-  background: transparent;
 }
  .btn-bg.Pokemon .btn-group .ball button a {
   color: #50514f;
@@ -146,39 +142,9 @@ html{
   align-items: center;
   max-width: 1200px;
 }
-@media screen and (max-width: 480px) {
-  .btn-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
 .btn {
   margin: auto;
   display: block;
-}
-.btn-info {
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: 'Lato';
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  font-size: 3.5em;
-  color: #fff;
-}
-.btn-mention {
-  margin-bottom: 70px;
-  text-align: center;
-  font-family: 'Lato';
-  letter-spacing: 0.1em;
-  font-size: 1.1em;
-  color: #fff;
-}
-.btn-mention span {
-  font-size: 0.5em;
-  font-weight: 600;
 }
 button {
   cursor: pointer;
@@ -195,104 +161,4 @@ button {
 }
 button a {
   text-decoration: none;
-}
-@-moz-keyframes wave {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(0.975);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-@-webkit-keyframes wave {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(0.975);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-@-o-keyframes wave {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(0.975);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-@keyframes wave {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(0.975);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-@-moz-keyframes smallwave {
-  0% {
-    transform: rotate(0deg) scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: rotate(180deg) scale(0.95);
-    opacity: 0.25;
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-    opacity: 0.8;
-  }
-}
-@-webkit-keyframes smallwave {
-  0% {
-    transform: rotate(0deg) scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: rotate(180deg) scale(0.95);
-    opacity: 0.25;
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-    opacity: 0.8;
-  }
-}
-@-o-keyframes smallwave {
-  0% {
-    transform: rotate(0deg) scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: rotate(180deg) scale(0.95);
-    opacity: 0.25;
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-    opacity: 0.8;
-  }
-}
-@keyframes smallwave {
-  0% {
-    transform: rotate(0deg) scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: rotate(180deg) scale(0.95);
-    opacity: 0.25;
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-    opacity: 0.8;
-  }
 }
