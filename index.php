@@ -23,7 +23,7 @@
   <div class="layer" data-depth="1.0"><img src="assets/images/nuage5.png"></div>
 </div>
         </div>
-        <div class="container" id="homePanel">
+        <div class="container col" id="homePanel">
           <div class="row">
             <div class="col">
                 <img id="homeLogo" src="assets/images/pbLogoTxt.png" alt="Logo Texte PokeBrain" title="PokeBrain" width="150"> 
@@ -47,9 +47,12 @@
                     <div class="btn-bg Pokemon">    
                         <div class="btn-group">
                             <div class="btn ball">
-                                <button>
-                                    <div class="pokemon-ball"></div><a>Se connecter<span data-letters="Go!"></span><span data-letters="Go!"></span></a>
-                                </button>
+                                <form style="display : inline" action="connexion.php" method="GET">
+                                    <button>
+                                        <div class="pokemon-ball"></div>
+                                        <a>Se connecter<span data-letters="Go!"></span><span data-letters="Go!"></span></a>
+                                    </button>                                    
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -58,17 +61,19 @@
                     <div class="btn-bg Pokemon">    
                         <div class="btn-group">
                             <div class="btn ball">
-                                <center><button>
-                                    <div class="pokemon-ball"></div><a>S'inscrire<span data-letters="Go!"></span><span data-letters="Go!"></span></a>
-                                    </button></center>
+                                <form style="display : inline" action="inscription.php" method="GET">
+                                    <button>
+                                        <div class="pokemon-ball"></div>
+                                        <a>S'inscrire<span data-letters="Go!"></span><span data-letters="Go!"></span></a>
+                                    </button>                                    
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
-    </body>
-    
+        </div>
+    </body>    
     <script src="assets/js/parallax.js"></script>
     <script>var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene, {

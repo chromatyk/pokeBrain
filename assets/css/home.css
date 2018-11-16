@@ -11,7 +11,6 @@ html{
     position: absolute;
     z-index: 2;
     top: 15%;
-    left: 20%;
     overflow-y: visible;
 }
 #homeLogo{
@@ -145,6 +144,7 @@ html{
 .btn {
   margin: auto;
   display: block;
+  margin: auto;
 }
 button {
   cursor: pointer;
@@ -166,4 +166,7 @@ button a {
 .bg{
     background-image: url("../images/fondacc.png");
     background-repeat: no-repeat;
+}
+.btn-group > .btn:first-child{
+    margin-left: auto;
 }
