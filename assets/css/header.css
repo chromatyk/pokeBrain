@@ -133,14 +133,16 @@ body,
 	transition: transform 0.3s;
 }
 
-header {
+.content {
 	position: relative;
-	background: #4c89b3;
+        background: #202020;
 }
 
 main {
 	position: relative;
-	background: #373A47;
+        padding-top: 100px;
+        padding-left: 100px;
+        color: white;
 }
 
 /* Overlay */

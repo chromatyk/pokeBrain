@@ -15,16 +15,9 @@
         <title>PokeBrain</title>
     </head>
     <body>
-		<div class="container">
 			<div class="menu-wrap">
 				<nav class="menu-top">
 					<div class="profile"><img src="img/user1.png" alt="Matthew Greenberg"/><span>Matthew Greenberg</span></div>
-					<div class="icon-list">
-						<a href="#"><i class="fa fa-fw fa-star-o"></i></a>
-						<a href="#"><i class="fa fa-fw fa-bell-o"></i></a>
-						<a href="#"><i class="fa fa-fw fa-envelope-o"></i></a>
-						<a href="#"><i class="fa fa-fw fa-comment-o"></i></a>
-					</div>
 				</nav>
 				<nav class="menu-side">
 					<a href="#">Recent Stories</a>
@@ -33,13 +26,13 @@
 					<a href="#">Categories</a>
 				</nav>
 			</div>
+		<div class="container">
 			<button class="menu-button" id="open-button">Open Menu</button>
 			<div class="content-wrap">
 				<div class="content">
 						<nav class="codrops-demos">
 						</nav>
-                                    <main class="codrops-main">
-						<nav class="codrops-demos">
+                                    <main class="">
                                                     <p>o</p>
                                                     <p>o</p>
                                                     <p>o</p>
@@ -107,7 +100,6 @@
                                                     <p>o</p>
                                                     <p>o</p>
                                                     <p>o</p>
-						</nav>
                                         </main>
 				</div>
 			</div><!-- /content-wrap -->
