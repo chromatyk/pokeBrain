@@ -162,3 +162,8 @@ button {
 button a {
   text-decoration: none;
 }
+
+.bg{
+    background-image: url("../images/fondacc.png");
+    background-repeat: no-repeat;
+}

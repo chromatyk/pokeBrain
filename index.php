@@ -4,15 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" type="image/png" href="assets/images/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
         <title>PokeBrain - Connexion</title>
     </head>
-    <body>
-       <div class="bg d-none d-lg-block">
+    <body class="bg">
+       <div class="d-none d-lg-block">
             <div data-relative-input="true" id="scene" style="width: auto; height: auto;">
     <div class="layer" data-depth="1.5"><img src="assets/images/latios.png"></div>
   <div class="layer" data-depth="1.7"><img src="assets/images/latias.png"></div>

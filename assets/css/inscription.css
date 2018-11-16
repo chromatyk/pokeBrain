@@ -1,0 +1,56 @@
+.bgInscription{
+    background-image: url("../images/fonduq.jpg");
+}
+
+.formInscription{
+    margin-top: 10%;
+    background-color: #202020;
+    padding: 10%;
+}
+
+.formInscription input{
+    background-color: black;
+    border-radius: 0;
+    border: 3px #4C89B3 solid;
+    height: 50px;
+        transition: ease-in-out;
+    transition-duration: 0.2s;
+    
+}
+
+.formInscription input:focus {
+    background: #202020;
+    color: white;
+    height: 70px;
+    font-size: 20px;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.submitInscription{
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    background: #4C89B3;
+    border: 0px transparent solid;
+    cursor: pointer;
+}
+
+label{
+    font-size: 1.2em;
+    color: white;
+    margin-left: 5px;
+}
+	body{
+	 background-color: #000000;
+   padding: 0px;
+   margin: 0px;
+ }
+
+#gradient
+{
+  width: 100%;
+  height: 1200px;
+  padding: 0px;
+  margin: 0px;
+}
