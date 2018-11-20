@@ -106,14 +106,14 @@ body #cdawrap {
 
 html, 
 body, 
-.container, 
+.contenu, 
 .content-wrap {
 	overflow-x: hidden;
 	width: 100%;
 	height: 100%;
 }
 
-.container {
+.contenu {
 	background: #373a47;
 }
 
