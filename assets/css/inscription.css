@@ -12,7 +12,6 @@
     background-color: black;
     border-radius: 0;
     border: 3px #4C89B3 solid;
-    height: 50px;
         transition: ease-in-out;
     transition-duration: 0.2s;
     
@@ -49,4 +48,11 @@ label{
   height: 1200px;
   padding: 0px;
   margin: 0px;
+}
+.form-control{
+    height: 50px;
+}
+.errorsLoginSub{
+    color : red;
+    text-align: center;
 }
