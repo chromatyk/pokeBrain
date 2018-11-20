@@ -5,11 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" type="image/png" href="assets/images/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
-        <link rel="stylesheet" type="text/css" href="/assets/css/fontAwesome.css" />
-        <link rel="stylesheet" type="text/css" href="/assets/css/header.css" />
-        <title>Profil - </title>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/fontAwesome.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/header.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/profile.css" />
+        <title>PokeBrain</title>
     </head>
     <body>
         <div class="menu-wrap">
