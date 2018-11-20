@@ -41,6 +41,7 @@ object-fit: cover;
 border-bottom-right-radius: 15px;
 -moz-border-radius-bottomright: 15px;
 -webkit-border-bottom-right-radius: 15px;
+margin-bottom: 150px;
 }
 
 #pseudo{
