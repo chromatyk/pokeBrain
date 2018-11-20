@@ -6,61 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="assets/css/test.css" rel="stylesheet" type="text/css"/>
 
     <title>Hello, world!</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
-<div id="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </button>
-      </h5>
-    </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+<div class="container">
+  <div class="profile large">
+    <div class="cover"><img src="https://source.unsplash.com/random/700x300"/>
+      <div class="layer">
+        <div class="loader"></div>
+      </div><a class="image-wrapper" href="#">
+        <form id="coverForm" action="#">
+          <input class="hidden-input" id="changeCover" type="file"/>
+          <label class="edit glyphicon glyphicon-pencil" for="changeCover" title="Change cover"></label>
+        </form></a>
+    </div>
+    <div class="user-info">
+      <div class="profile-pic"><img src="https://source.unsplash.com/random/300x300"/>
+        <div class="layer">
+          <div class="loader"></div>
+        </div><a class="image-wrapper" href="#">
+          <form id="profilePictureForm" action="#">
+            <input class="hidden-input" id="changePicture" type="file"/>
+            <label class="edit glyphicon glyphicon-pencil" for="changePicture" type="file" title="Change picture"></label>
+          </form></a>
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="username">
+        <div class="name"><span class="verified"></span>@John Doe</div>
+        <div class="about">Frontend developer and coffee lover</div>
       </div>
     </div>
   </div>
 </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script>
+    var PictureUpdate = /** @class */ (function () {
+    function PictureUpdate() {
+        this.profile = $('.profile-pic'); //direct parent
+        this.cover = $('.cover'); //direct parent
+        this.updateProfile();
+        this.updateCover();
+    }
+    PictureUpdate.prototype.updateProfile = function () {
+        var _this = this;
+        var input = $('input', this.profile);
+        input.change(function (e) {
+            var img = URL.createObjectURL(e.target.files[0]);
+            _this.fireAJAX(null, img, _this.profile);
+        });
+    };
+    PictureUpdate.prototype.updateCover = function () {
+        var _this = this;
+        var input = $('input', this.cover);
+        input.change(function (e) {
+            var img = URL.createObjectURL(e.target.files[0]);
+            _this.fireAJAX(null, img, _this.cover);
+        });
+    };
+    PictureUpdate.prototype.fireAJAX = function (url, data, element) {
+        var _this = this;
+        $.ajax({
+            type: "POST",
+            data: data,
+            beforeSend: function () {
+                _this.startLoader(element);
+            },
+            success: function () {
+                setTimeout(function () {
+                    _this.destroyLoader(element);
+                    $('> img', element).attr("src", data);
+                }, 2000);
+            }
+        });
+    };
+    PictureUpdate.prototype.startLoader = function (element) {
+        var loader = $('.layer', element);
+        loader.addClass("visible");
+    };
+    PictureUpdate.prototype.destroyLoader = function (element) {
+        var loader = $('.layer', element);
+        loader.removeClass("visible");
+    };
+    return PictureUpdate;
+}());
+new PictureUpdate();
+
+    </script>
+    
   </body>
 </html>
