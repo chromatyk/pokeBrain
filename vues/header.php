@@ -6,8 +6,9 @@
         <link rel="icon" type="image/png" href="assets/images/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
-        <link rel="stylesheet" type="text/css" href="../assets/css/fontAwesome.css" />
-        <link rel="stylesheet" type="text/css" href="../assets/css/header.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/fontAwesome.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/header.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/profile.css" />
         <title>PokeBrain</title>
     </head>
     <body>
@@ -22,7 +23,7 @@
                 <a href="#">Categories</a>
             </nav>
         </div>
-        <div class="container">
+        <div class="contenu">
             <button class="menu-button" id="open-button">Open Menu</button>
             <div class="content-wrap">
                 <div class="content">
