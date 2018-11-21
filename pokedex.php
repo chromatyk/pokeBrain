@@ -12,6 +12,10 @@ include_once 'controllers/usersInfos.php';
         
         <!-- Début de la carte pokémon -->
         <div class="cardPkm">
+            <div>#148 - Sulfura</div>
+            <div class="cardBall cardPokemon"><img src="assets/shinyGif/Sulfura.png"></div>
+            <div></div>
+            <div class="pkmNickname">Barbecue</div>
 
         </div>
         <!-- Fin de la carte du pokémon -->
@@ -27,6 +31,16 @@ include_once 'controllers/usersInfos.php';
         
         
                 <!-- Début de la carte pokémon -->
+        <div class="cardPkm">
+
+        </div>
+        <!-- Fin de la carte du pokémon -->
+                        <!-- Début de la carte pokémon -->
+        <div class="cardPkm">
+
+        </div>
+        <!-- Fin de la carte du pokémon -->
+                        <!-- Début de la carte pokémon -->
         <div class="cardPkm">
 
         </div>
