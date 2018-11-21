@@ -3,57 +3,57 @@
     margin-bottom: 5%;
 }
 
-
-#pokedex{
-}
-
-.poke{
-    height: 238px;
-    margin-right: 10px;
-    
-}
-
-
-.pokedexRow{
-    
-}
-
 .cardPkm{
-    border: 6px white dashed;
+    border: solid black 4px;
+    border-radius: 50%;
     width: 250px;
     height: 250px;
     margin-bottom: 10px;
     margin-right: 20px;
-}
-
-.pokeInfos{
-    height: 200px;
-    text-align:center;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),url(../images/pokeball.png);
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 .cardPokemon {
-  position: relative;
-  max-height: 230px;
-  margin-bottom: 35px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
+    min-height: 163px;
+    max-height: 163px;
+    z-index: 101; 
+    line-height: 210px; 
+    text-align: center;
 }
 .cardBall{
-background: url('../images/pokeball.png');
-
 }
 
-.cardBall img {
-    position: absolute;
-  }
-
-.infoPokemn{
-    color: white;
+.pkmName{
+    text-align: center;
     font-size: 20px;
 }
 
-
-
 .pkmNickname{
-    position: absolute;
-    
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    color: orange;
+
+    font-family: 'Righteous', cursive;
+
+
+}
+
+.cardPkmSuper{
+    border: solid black 4px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),url(../images/masterball.png);
+  background-size:cover;
+  background-repeat:no-repeat;
 }
