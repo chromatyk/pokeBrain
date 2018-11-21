@@ -1,0 +1,59 @@
+.titlePokedex{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+#pokedex{
+}
+
+.poke{
+    height: 238px;
+    margin-right: 10px;
+    
+}
+
+
+.pokedexRow{
+    
+}
+
+.cardPkm{
+    border: 6px white dashed;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.pokeInfos{
+    height: 200px;
+    text-align:center;
+}
+.cardPokemon {
+  position: relative;
+  max-height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+.cardBall{
+background: url('../images/pokeball.png');
+
+}
+
+.cardBall img {
+    position: absolute;
+  }
+
+.infoPokemn{
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.pkmNickname{
+    position: absolute;
+    
+}
