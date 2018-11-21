@@ -12,40 +12,23 @@ include_once 'controllers/usersInfos.php';
         
         <!-- Début de la carte pokémon -->
         <div class="cardPkm">
-            <div>#148 - Sulfura</div>
-            <div class="cardBall cardPokemon"><img src="assets/shinyGif/Sulfura.png"></div>
-            <div></div>
-            <div class="pkmNickname">Barbecue</div>
+            
+            <div class="cardPokemon"><img src="assets/shinyGif/Steelix.png"></div>
+            <div class="cardBall"></div>
+            <div class="pkmName">#148 - Kangourex</div>
+            <div class="pkmNickname">Tranch'Jambon</div>
 
         </div>
         <!-- Fin de la carte du pokémon -->
         
-        
-        
-                <!-- Début de la carte pokémon -->
-        <div class="cardPkm">
+                <div class="cardPkmSuper">
+            
+                    <div class="cardPokemon"><img src="assets/shinyGif/Fouinette.png"></div>
+            <div class="cardSuper"></div>
+            <div class="pkmName">#148 - Kangourex</div>
+            <div class="pkmNickname">Tranch'Jambon</div>
 
         </div>
-        <!-- Fin de la carte du pokémon -->
-        
-        
-        
-                <!-- Début de la carte pokémon -->
-        <div class="cardPkm">
-
-        </div>
-        <!-- Fin de la carte du pokémon -->
-                        <!-- Début de la carte pokémon -->
-        <div class="cardPkm">
-
-        </div>
-        <!-- Fin de la carte du pokémon -->
-                        <!-- Début de la carte pokémon -->
-        <div class="cardPkm">
-
-        </div>
-        <!-- Fin de la carte du pokémon -->
-        
 
 
 
