@@ -13,6 +13,7 @@
 border-bottom-right-radius: 15px;
 -moz-border-radius-bottomright: 15px;
 -webkit-border-bottom-right-radius: 15px;
+margin-bottom: 20px;
 }
 
 .bannerParallax{
@@ -62,8 +63,9 @@ margin-bottom: 150px;
 }
 
 .safariPark{
-    height: 200px;
     background: #373A47;
+    padding-top : 30px;
+    padding-bottom : 30px;
 }
 .gen1{
 }
@@ -83,3 +85,54 @@ margin-bottom: 150px;
     height: 100%;
     overflow: hidden;
   }
+  .card{
+      background-color: #484B58;
+      border:transparent;
+  }
+  .card-body{
+      background-color: #595C69;
+      border:transparent;
+  }
+  
+.btn{
+    cursor: pointer;
+    color: white;
+    padding: 0;
+}
+  .btn-link:hover{
+    box-shadow: none;
+    color: #2E7AAB;
+    text-decoration: none;
+}
+.progressHunt{
+    text-align: center;
+}
+.detailsHunt{
+    color:white;
+}
+#typePark{
+    margin-bottom: 10px;
+}
+  @media screen and (max-width: 991px) {
+  .cardProfile{
+   display : none;
+}
+}
+@media screen and (min-width: 992px) and (max-width: 1594px) {
+  .cardProfile{
+    background: grey;
+    width: 18rem;
+    height: 50%;
+    position: absolute;
+    z-index: 200000000;
+    top: 150px;
+    left: 15px;
+    box-shadow: 10px 10px 20px 0px #202020;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#202020, Direction=134, Strength=20); border-bottom-left-radius: 15px;
+-moz-border-radius-bottomleft: 15px;
+-webkit-border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+-moz-border-radius-bottomright: 15px;
+-webkit-border-bottom-right-radius: 15px;
+}
+}
