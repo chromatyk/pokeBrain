@@ -1,0 +1,43 @@
+.titlePokedex{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+#pokedex{
+}
+
+.poke{
+    height: 238px;
+    margin-right: 10px;
+    
+}
+
+
+.pokedexRow{
+    
+}
+
+.cardPkm{
+    display: block;
+    border: 6px white dashed;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.pokeInfos{
+    height: 200px;
+    text-align:center;
+}
+
+.pokeInfos img{
+    min-height: 60%;
+    max-height: 65%;
+    
+}
+
+.infoPokemn{
+    color: white;
+    font-size: 20px;
+}
