@@ -1,8 +1,7 @@
 .cardProfile{
     background: grey;
     width: 18rem;
-    height: 100%;
-    background: white;
+    height: 50%;
     position: absolute;
     z-index: 200000000;
     top: 150px;
@@ -17,12 +16,16 @@ border-bottom-right-radius: 15px;
 }
 
 .bannerParallax{
+    width: 100%;
     height: 250px;
-    background-color: red;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s ease-out;
 }
 
 .profilePicture{
-    height: 50%;
+    height: 100%;
     border-bottom: 5px black solid;
 }
 
@@ -33,14 +36,15 @@ object-fit: cover;
 }
 
 .profileInfos{
-    height: 50%;
-    background: grey;
+    height-min: 10%;
+    background: #373A47;
             border-bottom-left-radius: 15px;
 -moz-border-radius-bottomleft: 15px;
 -webkit-border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;
 -moz-border-radius-bottomright: 15px;
 -webkit-border-bottom-right-radius: 15px;
+padding-bottom: 20px;
 margin-bottom: 150px;
 }
 
@@ -59,8 +63,23 @@ margin-bottom: 150px;
 
 .safariPark{
     height: 200px;
-    background: blue;
+    background: #373A47;
 }
 .gen1{
-    background: green;
 }
+#biouser{
+    word-wrap:break-word;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tiles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tile {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
