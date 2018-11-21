@@ -1,3 +1,10 @@
+#navProfilImg{
+    width: 42px;
+    height:42px;
+}
+#pseudoTitle{
+    color : white;
+}
 *{
     margin: 0;
 }
@@ -141,8 +148,6 @@ body,
 main {
 	position: relative;
         padding-top: 100px;
-        padding-left: 100px;
-        padding-right: 100px;
         color: white;
 }
 
