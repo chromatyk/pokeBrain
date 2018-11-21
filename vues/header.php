@@ -17,9 +17,16 @@
         <title>PokeBrain</title>
     </head>
     <body>
+        <?php
+        include_once 'models/dataBase.php';
+        include_once 'models/users.php';
+        include_once 'models/safaryFriend.php';
+        include_once 'models/hunts.php';
+        include_once 'controllers/usersInfos.php';
+        ?>
         <div class="menu-wrap">
             <nav class="menu-top">
-                <div class="profile"><img src="img/user1.png" alt="Matthew Greenberg"/><span>Matthew Greenberg</span></div>
+                <div class="profile"><img id="navProfilImg" src="/assets/images/Lexae.png" alt="Matthew Greenberg"/><span id="pseudoTitle"><?= $userConnected->pseudo; ?> - Maître de la Ligue</span></div>
             </nav>
             <nav class="menu-side">
                 <a href="#">Recent Stories</a>
