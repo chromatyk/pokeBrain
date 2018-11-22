@@ -1,103 +1,60 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/test.css" rel="stylesheet" type="text/css"/>
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-<div class="container">
-  <div class="profile large">
-    <div class="cover"><img src="https://source.unsplash.com/random/700x300"/>
-      <div class="layer">
-        <div class="loader"></div>
-      </div><a class="image-wrapper" href="#">
-        <form id="coverForm" action="#">
-          <input class="hidden-input" id="changeCover" type="file"/>
-          <label class="edit glyphicon glyphicon-pencil" for="changeCover" title="Change cover"></label>
-        </form></a>
-    </div>
-    <div class="user-info">
-      <div class="profile-pic"><img src="https://source.unsplash.com/random/300x300"/>
-        <div class="layer">
-          <div class="loader"></div>
-        </div><a class="image-wrapper" href="#">
-          <form id="profilePictureForm" action="#">
-            <input class="hidden-input" id="changePicture" type="file"/>
-            <label class="edit glyphicon glyphicon-pencil" for="changePicture" type="file" title="Change picture"></label>
-          </form></a>
-      </div>
-      <div class="username">
-        <div class="name"><span class="verified"></span>@John Doe</div>
-        <div class="about">Frontend developer and coffee lover</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-    <script>
-    var PictureUpdate = /** @class */ (function () {
-    function PictureUpdate() {
-        this.profile = $('.profile-pic'); //direct parent
-        this.cover = $('.cover'); //direct parent
-        this.updateProfile();
-        this.updateCover();
-    }
-    PictureUpdate.prototype.updateProfile = function () {
-        var _this = this;
-        var input = $('input', this.profile);
-        input.change(function (e) {
-            var img = URL.createObjectURL(e.target.files[0]);
-            _this.fireAJAX(null, img, _this.profile);
-        });
-    };
-    PictureUpdate.prototype.updateCover = function () {
-        var _this = this;
-        var input = $('input', this.cover);
-        input.change(function (e) {
-            var img = URL.createObjectURL(e.target.files[0]);
-            _this.fireAJAX(null, img, _this.cover);
-        });
-    };
-    PictureUpdate.prototype.fireAJAX = function (url, data, element) {
-        var _this = this;
-        $.ajax({
-            type: "POST",
-            data: data,
-            beforeSend: function () {
-                _this.startLoader(element);
-            },
-            success: function () {
-                setTimeout(function () {
-                    _this.destroyLoader(element);
-                    $('> img', element).attr("src", data);
-                }, 2000);
+<?php
+include_once 'vues/header.php';
+include_once 'models/dataBase.php';
+include_once 'models/pokemons.php';
+include_once 'models/hunts.php';
+include 'controllers/livingDexController.php';
+if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
+    ?>
+    <div class="container bodyPage">
+        <h1 class="titlePokedex">Pokédex de Ohne</h1>
+        <div class="row pokedexRow">
+            <?php
+            foreach ($catchedPokemon as $catchedPokemon) {
+                ?>
+                <div class = "boxPkm">
+                    <div class = "caseLivingDex">
+                        <?php
+                        if ($catchedPokemon->catchStatement == 1 && $catchedPokemon->idUser == $_SESSION['id']) {
+                            ?>
+                            <a href="#">
+                                <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#exampleModalCenter" style="background-image:url(assets/pokeball/<?= $catchedPokemon->nameBall ?>.png);">
+                                    <div class="cardPokemon"><img src="assets/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
+                                    <div class="cardBall"></div>
+                                    <div class="pkmName">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></div>
+                                    <div class="pkmNickname"><?= $catchedPokemon->nickName ?></div>
+                                </div>
+                            </a>
+                            <div class="boxSpriteCaptured">
+                            </div>
+                        <?php }
+                        ?>
+                    </div>
+                </div>
+                <?php
             }
-        });
-    };
-    PictureUpdate.prototype.startLoader = function (element) {
-        var loader = $('.layer', element);
-        loader.addClass("visible");
-    };
-    PictureUpdate.prototype.destroyLoader = function (element) {
-        var loader = $('.layer', element);
-        loader.removeClass("visible");
-    };
-    return PictureUpdate;
-}());
-new PictureUpdate();
-
-    </script>
+            ?>
+        </div>
+    </div>
+    <?php
+}
+?>
+<div id="pokedex" class="container">    <!-- Modal -->
+    <div class="modal fade modalPkm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include 'vues/footer.php' ?>
     
-  </body>
-</html>

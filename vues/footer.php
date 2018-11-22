@@ -1,7 +1,6 @@
 </main>
 <footer>
     <div>
-        Bite
     </div>
 </footer>
 </div>
