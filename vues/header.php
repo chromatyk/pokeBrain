@@ -38,18 +38,10 @@
                 </div>
             </nav>
             <nav class="menu-side">
-<<<<<<< HEAD
-                <a href="/profile.php">Profil</a>
-                <a href="/pokedex.php">Collection</a>
-                <a href="#">Pokédex</a>
-                <a href="#">StreamLand</a>
-                <a href="#">Shasse</a>
-=======
                 <a href="/mon_profil/<?= $_SESSION['pseudo']?>">Profil</a>
                 <a href="/collection/<?= $_SESSION['pseudo']?>">Collection</a>
                 <a href="#">My Stories</a>
                 <a href="#">Categories</a>
->>>>>>> 9c69edd33906f9cd989be2685aa08ed831f2f26d
             </nav>
         </div>
         <div class="contenu">
