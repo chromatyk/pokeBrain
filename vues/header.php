@@ -42,7 +42,6 @@
                 <a href="/collection/<?= $_SESSION['pseudo']?>">Collection</a>
                 <a href="#">My Stories</a>
                 <a href="#">Categories</a>
-
             </nav>
         </div>
         <div class="contenu">

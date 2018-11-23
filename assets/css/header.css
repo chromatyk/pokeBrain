@@ -144,7 +144,11 @@ body,
 .content {
 	position: relative;
         background: #202020;
+<<<<<<< HEAD
         min-height: 100%;
+=======
+        min-height:100%;
+>>>>>>> 9c69edd33906f9cd989be2685aa08ed831f2f26d
 }
 
 main {
