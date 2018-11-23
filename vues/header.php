@@ -31,8 +31,8 @@
                 <div class="profile"><img id="navProfilImg" src="/assets/images/Lexae.png" alt="Matthew Greenberg"/><span id="pseudoTitle"><?= $userConnected->pseudo; ?> - Maître de la Ligue</span></div>
             </nav>
             <nav class="menu-side">
-                <a href="#">Recent Stories</a>
-                <a href="#">Reading List</a>
+                <a href="/profile.php">Profil</a>
+                <a href="/pokedex.php">Collection</a>
                 <a href="#">My Stories</a>
                 <a href="#">Categories</a>
             </nav>

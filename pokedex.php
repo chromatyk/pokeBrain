@@ -1,57 +1,60 @@
 <?php
-include 'vues/header.php';
+include_once 'vues/header.php';
 include_once 'models/dataBase.php';
-include_once 'models/users.php';
-include_once 'models/safaryFriend.php';
+include_once 'models/pokemons.php';
 include_once 'models/hunts.php';
-include_once 'controllers/usersInfos.php';
-?>
-<h1 class="titlePokedex">Pokédex de Ohne</h1>
-<div id="pokedex" class="container">
-    <div class="row pokedexRow">
-        
-        <!-- Début de la carte pokémon -->
-        <a href="#"><div class="cardPkm" data-toggle="modal" data-target="#exampleModalCenter">
-            
-            <div class="cardPokemon"><img src="assets/shinyGif/Steelix.png"></div>
-            <div class="cardBall"></div>
-            <div class="pkmName">#148 - Kangourex</div>
-            <div class="pkmNickname">Tranch'Jambon</div>
-
-        </div></a>
-        <!-- Fin de la carte du pokémon -->
-        
-                <div class="cardPkmSuper">
-            
-                    <div class="cardPokemon"><img src="assets/shinyGif/Fouinette.png"></div>
-            <div class="cardSuper"></div>
-            <div class="pkmName">#148 - Kangourex</div>
-            <div class="pkmNickname">Tranch'Jambon</div>
-
+include 'controllers/livingDexController.php';
+if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
+    ?>
+    <div class="container bodyPage">
+        <h1 class="titlePokedex">Pokédex de <?= $_SESSION['pseudo'] ?></h1>
+        <div id="pokedex" class="row pokedexRow">
+            <?php
+            foreach ($catchedPokemon as $catchedPokemon) {
+                ?>
+                <div class = "boxPkm">
+                    <div class = "caseLivingDex">
+                        <?php
+                        if ($catchedPokemon->catchStatement == 1 && $catchedPokemon->idUser == $_SESSION['id']) {
+                            ?>
+                            <a href="#">
+                                <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#exampleModalCenter" style="background-image:url(assets/pokeball/<?= $catchedPokemon->nameBall ?>.png);">
+                                    <div class="cardPokemon"><img src="assets/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
+                                    <div class="cardBall"></div>
+                                    <div class="pkmName">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></div>
+                                    <div class="pkmNickname"><?= $catchedPokemon->nickName ?></div>
+                                </div>
+                            </a>
+                            <div class="boxSpriteCaptured">
+                            </div>
+                        <?php }
+                        ?>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
         </div>
-
-
-
     </div>
-    
-    <!-- Modal -->
-<div class="modal fade modalPkm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<?php
-include 'vues/footer.php';
+    <?php
+} 
 ?>
-
+<div id="pokedex" class="container">    <!-- Modal -->
+    <div class="modal fade modalPkm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include 'vues/footer.php' ?>
+    

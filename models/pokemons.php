@@ -133,7 +133,7 @@ class pokemons extends dataBase {
     }
     
     public function getCatchedPokemonByIdUsers() {
-        $getCatchedPokemonByIdUsers = $this->db->prepare('SELECT pokeballs.nameBall AS nameBall, pokemon.id AS id, pokemon.nomPkm AS nomPkm,hunts.nickName AS nickName, hunts.catchStatement AS catchStatement, hunts.idUser AS idUser, hunts.endDate AS endDate FROM `pokemon` LEFT JOIN `hunts` ON pokemon.id = hunts.idPokemon LEFT JOIN `pokeballs` ON pokeballs.id = hunts.idBall  WHERE idUser = 62 AND catchStatement = 1 ORDER BY endDate DESC');
+        $getCatchedPokemonByIdUsers = $this->db->prepare('SELECT pokeballs.nameBall AS nameBall, pokemon.id AS id, pokemon.nomPkm AS nomPkm,hunts.nickName AS nickName, hunts.catchStatement AS catchStatement, hunts.idUser AS idUser, hunts.endDate AS endDate FROM `pokemon` LEFT JOIN `hunts` ON pokemon.id = hunts.idPokemon LEFT JOIN `pokeballs` ON pokeballs.id = hunts.idBall  WHERE idUser = :idUser AND catchStatement = 1 ORDER BY endDate DESC');
         $getCatchedPokemonByIdUsers->bindValue(':idUser', $this->idUser, PDO::PARAM_INT);
         $getCatchedPokemonByIdUsers->execute();
         $getCatchedPokemonByIdUsers = $getCatchedPokemonByIdUsers->fetchAll(PDO::FETCH_OBJ);
