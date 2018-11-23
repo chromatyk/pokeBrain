@@ -1,3 +1,4 @@
+
 #navProfilImg{
     width: 42px;
     height:42px;
@@ -143,6 +144,7 @@ body,
 .content {
 	position: relative;
         background: #202020;
+        min-height:100%;
 }
 
 main {

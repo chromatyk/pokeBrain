@@ -47,7 +47,7 @@
                     <div class="btn-bg Pokemon">    
                         <div class="btn-group">
                             <div class="btn ball">
-                                <form style="display : inline" action="connexion.php" method="GET">
+                                <form style="display : inline" action="connexion" method="GET">
                                     <button>
                                         <div class="pokemon-ball"></div>
                                         <a>Se connecter<span data-letters="Go!"></span><span data-letters="Go!"></span></a>
@@ -61,7 +61,7 @@
                     <div class="btn-bg Pokemon">    
                         <div class="btn-group">
                             <div class="btn ball">
-                                <form style="display : inline" action="inscription.php" method="GET">
+                                <form style="display : inline" action="inscription" method="GET">
                                     <button>
                                         <div class="pokemon-ball"></div>
                                         <a>S'inscrire<span data-letters="Go!"></span><span data-letters="Go!"></span></a>

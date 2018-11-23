@@ -37,8 +37,8 @@
                 </div>
             </nav>
             <nav class="menu-side">
-                <a href="/profile.php">Profil</a>
-                <a href="/pokedex.php">Collection</a>
+                <a href="/mon_profil/<?= $_SESSION['pseudo']?>">Profil</a>
+                <a href="/collection/<?= $_SESSION['pseudo']?>">Collection</a>
                 <a href="#">My Stories</a>
                 <a href="#">Categories</a>
             </nav>
@@ -49,5 +49,6 @@
                 <div class="content">
                     <nav class="codrops-demos">
                     </nav>
-                    <main class="">
+
+                    
 
