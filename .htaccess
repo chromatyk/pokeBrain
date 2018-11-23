@@ -9,4 +9,7 @@
     #? = $1 n'est pas obligatoire
     #([0-9]+) = page=$2
 RewriteRule mon_profil/([A-Za-z]+[0-9]{0,9}?)?$ /profile.php [L]
+RewriteRule /connexion /connexion.php [L]
+RewriteRule /inscription /inscription.php [L]
+RewriteRule /collection/([A-Za-z]+[0-9]{0,9}?)?$ /collection.php [L]
 </IfModule>

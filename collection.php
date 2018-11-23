@@ -19,7 +19,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                             ?>
                             <a href="#">
                                 <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#exampleModalCenter" style="background-image:url(assets/pokeball/<?= $catchedPokemon->nameBall ?>.png);">
-                                    <div class="cardPokemon"><img src="assets/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
+                                    <div class="cardPokemon"><img src="/assets/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
                                     <div class="cardBall"></div>
                                     <div class="pkmName">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></div>
                                     <div class="pkmNickname"><?= $catchedPokemon->nickName ?></div>
