@@ -219,7 +219,7 @@ main {
 
 .menu-top .profile,
 .menu-side {
-	width: 300px;
+	min-width: 400px;
 }
 
 .menu-top .profile img {

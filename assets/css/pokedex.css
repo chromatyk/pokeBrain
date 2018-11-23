@@ -48,14 +48,13 @@
     height: 250px;
     margin-bottom: 10px;
     margin-right: 20px;
-
   background-size:cover;
   background-repeat:no-repeat;
 }
 
 @media screen and (max-width: 574px) {
   #pokedex {
-      margin-left: 15%;
+      margin-left: 12%;
   }
 }
 

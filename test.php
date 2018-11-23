@@ -8,7 +8,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
     ?>
     <div class="container bodyPage">
         <h1 class="titlePokedex">Pokédex de Ohne</h1>
-        <div class="row pokedexRow">
+        <div id="pokedex" class="row pokedexRow">
             <?php
             foreach ($catchedPokemon as $catchedPokemon) {
                 ?>
@@ -18,7 +18,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                         if ($catchedPokemon->catchStatement == 1 && $catchedPokemon->idUser == $_SESSION['id']) {
                             ?>
                             <a href="#">
-                                <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#exampleModalCenter" style="background-image:url(assets/pokeball/<?= $catchedPokemon->nameBall ?>.png);">
+                                <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#exampleModalCenter" style="background-image:url(assets/pokeball/<?php if ($catchedPokemon->nameBall > 0 || is_null($catchedPokemon->nameBall)){ echo 'Poke'; } else { echo $catchedPokemon->nameBall; }?>.png);">
                                     <div class="cardPokemon"><img src="assets/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
                                     <div class="cardBall"></div>
                                     <div class="pkmName">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></div>
