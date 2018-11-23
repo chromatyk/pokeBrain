@@ -11,11 +11,11 @@
     margin-bottom: 10px;
     margin-right: 20px;
     background: linear-gradient(
-      rgba(0, 0, 0, 0.25), 
-      rgba(0, 0, 0, 0.25)
-    ),url(../pokeball/masseball.png);
-  background-size:cover;
-  background-repeat:no-repeat;
+        rgba(0, 0, 0, 0.25), 
+        rgba(0, 0, 0, 0.25)
+        ),url(../pokeball/masseball.png);
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 .cardPokemon {
     min-height: 163px;
@@ -48,17 +48,51 @@
     height: 250px;
     margin-bottom: 10px;
     margin-right: 20px;
-  background-size:cover;
-  background-repeat:no-repeat;
-}
-
-@media screen and (max-width: 574px) {
-  #pokedex {
-      margin-left: 12%;
-  }
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 
 #pokedex a {
     text-decoration: none;
 }
 
+#namePkmModal{
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+}
+hr{
+    margin: 0;
+}
+#nickNameModal{
+    color: orange;
+    font-weight: bold;
+    text-align:center;
+    font-size: 30px;
+}
+.imgModal{
+    display: block;
+    margin: auto;
+}
+.ballModal{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left : 30px;
+    top:15px;
+}
+
+@media screen and (max-width: 574px) {
+    #pokedex {
+        margin-left: 12%;
+    }
+
+    .ballModal{
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        left : 10px;
+        top:20px;
+    }
+}

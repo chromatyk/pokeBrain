@@ -13,6 +13,19 @@ include 'vues/header.php';
 </div>
 <div class="tile" data-scale="1.05" data-image="/assets/images/banniere.png"></div>
 <div class="safariPark col-xs-12 offset-lg-3 col-lg-8">
+<?php if (isset($finishedHuntByGen)) { ?>
+            <p class="progressHunt">Progression globale : <?= $userConnected->nbUsersHunts ?> / 805 - <?= round($userConnected->nbUsersHunts / 805 * 100, 2); ?>%</p>
+            <div class="progress">
+                <div class="progress-bar" style="width:<?= round($userConnected->nbUsersHunts / 805 * 100, 2);; ?>%"></div>
+            </div>
+            <center><a class="detailsHunt" href="/collection/<?= $_SESSION['pseudo']?>" title="Détails de la progression">Détails</a></center> 
+<?php } else { ?>
+            <p class="progressHunt">0 / 805 - 0%</p>
+            <div class="progress" style="width:100px;">
+                <div class="progress-bar" style="width:0%"></div>
+            </div>
+            <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center>
+<?php } ?>
     <div class="col-sm-offset-5 col-md-offset-2 col-lg-offset-4">
         <center><p id="caProfil">Code Ami : <?= $userConnected->friendCode; ?></p></center>
     </div>
@@ -45,7 +58,6 @@ include 'vues/header.php';
     ?>
 </div>
 <div class="gen1 offset-lg-3 col-lg-8">
-
     <div id="accordion">
         <div class="card">
             <div class="card-header" id="headingOne">
@@ -55,16 +67,27 @@ include 'vues/header.php';
                     </p>
                 </h5>
             </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                    <p class="progressHunt">151 / 151 - 100%</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:100%"></div>
+            <?php if (isset($finishedHuntByGen[0])) { ?>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt"><?= $finishedHuntByGen[0]->numberOfFinishedHunt ?> / 151 - <?= round($finishedHuntByGen[0]->numberOfFinishedHunt / 151 * 100, 2); ?>%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:<?= round($finishedHuntByGen[0]->numberOfFinishedHunt / 151 * 100, 2); ?>%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                     </div>
-                    <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                 </div>
-            </div>
+            <?php } else { ?>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt">0 / 151 - 0%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:0%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
+                    </div>
+                </div>
+            <?php } ?>
         </div>
         <div class="card">
             <div class="card-header" id="headingTwo">
@@ -74,15 +97,27 @@ include 'vues/header.php';
                     </p>
                 </h5>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                    <p class="progressHunt">151 / 151 - 100%</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:80%"></div>
+            <?php if (isset($finishedHuntByGen[1])) { ?>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt"><?= $finishedHuntByGen[1]->numberOfFinishedHunt ?> / 99 - <?= round($finishedHuntByGen[1]->numberOfFinishedHunt / 99 * 100, 2); ?>%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:<?= round($finishedHuntByGen[1]->numberOfFinishedHunt / 99 * 100, 2); ?>%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                     </div>
-                    <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center>                 
                 </div>
-            </div>
+            <?php } else { ?>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt">0 / 99 - 0%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:0%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
+                    </div>
+                </div>
+            <?php } ?>
         </div>
         <div class="card">
             <div class="card-header" id="headingThree">
@@ -92,15 +127,27 @@ include 'vues/header.php';
                     </p>
                 </h5>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                    <p class="progressHunt">151 / 151 - 100%</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:60%"></div>
+            <?php if (isset($finishedHuntByGen[2])) { ?>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt"><?= $finishedHuntByGen[2]->numberOfFinishedHunt ?> / 134 - <?= round($finishedHuntByGen[2]->numberOfFinishedHunt / 134 * 100, 2); ?>%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:<?= round($finishedHuntByGen[2]->numberOfFinishedHunt / 134 * 100, 2); ?>%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                     </div>
-                    <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center>                 
                 </div>
-            </div>
+            <?php } else { ?>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt">0 / 134 - 0%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:0%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
+                    </div>
+                </div>
+            <?php } ?>
         </div>
 
         <div class="card">
@@ -111,15 +158,27 @@ include 'vues/header.php';
                     </p>
                 </h5>
             </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                <div class="card-body">
-                    <p class="progressHunt">151 / 151 - 100%</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:40%"></div>
+            <?php if (isset($finishedHuntByGen[3])) { ?>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt"><?= $finishedHuntByGen[3]->numberOfFinishedHunt ?> / 106 - <?= round($finishedHuntByGen[3]->numberOfFinishedHunt / 106 * 100, 2); ?>%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:<?= round($finishedHuntByGen[3]->numberOfFinishedHunt / 106 * 100, 2); ?>%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                     </div>
-                    <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center>                 
                 </div>
-            </div>
+            <?php } else { ?>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt">0 / 106 - 0%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:0%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
+                    </div>
+                </div>
+            <?php } ?>
         </div>
 
         <div class="card">
@@ -130,17 +189,28 @@ include 'vues/header.php';
                     </p>
                 </h5>
             </div>
-            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                <div class="card-body">
-                    <p class="progressHunt">151 / 151 - 100%</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:30%"></div>
+            <?php if (isset($finishedHuntByGen[4])) { ?>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt"><?= $finishedHuntByGen[4]->numberOfFinishedHunt ?> / 156 - <?= round($finishedHuntByGen[4]->numberOfFinishedHunt / 156 * 100, 2); ?>%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:<?= round($finishedHuntByGen[4]->numberOfFinishedHunt / 156 * 100, 2); ?>%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                     </div>
-                    <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center>                 
                 </div>
-            </div>
+            <?php } else { ?>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt">0 / 156 - 0%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:0%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
+                    </div>
+                </div>
+            <?php } ?>
         </div>
-
         <div class="card">
             <div class="card-header" id="headingSix">
                 <h5 class="mb-0">
@@ -149,15 +219,27 @@ include 'vues/header.php';
                     </p>
                 </h5>
             </div>
-            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                <div class="card-body">
-                    <p class="progressHunt">151 / 151 - 100%</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:20%"></div>
+            <?php if (isset($finishedHuntByGen[5])) { ?>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt"><?= $finishedHuntByGen[5]->numberOfFinishedHunt ?> / 71 - <?= round($finishedHuntByGen[5]->numberOfFinishedHunt / 71 * 100, 2); ?>%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:<?= round($finishedHuntByGen[5]->numberOfFinishedHunt / 71 * 100, 2); ?>%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                     </div>
-                    <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center>                 
                 </div>
-            </div>
+            <?php } else { ?>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt">0 / 71 - 0%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:0%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
+                    </div>
+                </div>
+            <?php } ?>
         </div>
 
         <div class="card">
@@ -168,15 +250,27 @@ include 'vues/header.php';
                     </p>
                 </h5>
             </div>
-            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                <div class="card-body">
-                    <p class="progressHunt">151 / 151 - 100%</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:10%"></div>
+            <?php if (isset($finishedHuntByGen[6])) { ?>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt"><?= $finishedHuntByGen[6]->numberOfFinishedHunt ?> / 87 - <?= round($finishedHuntByGen[6]->numberOfFinishedHunt / 87 * 100, 2); ?>%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:<?= round($finishedHuntByGen[6]->numberOfFinishedHunt / 87 * 100, 2); ?>%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
                     </div>
-                    <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center>
                 </div>
-            </div>
+            <?php } else { ?>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="progressHunt">0 / 87 - 0%</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:0%"></div>
+                        </div>
+                        <center><a class="detailsHunt" href="#" title="Détails de la progression">Détails</a></center> 
+                    </div>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>
