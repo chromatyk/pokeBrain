@@ -37,8 +37,8 @@
                 </div>
             </nav>
             <nav class="menu-side">
-                <a href="#">Recent Stories</a>
-                <a href="#">Reading List</a>
+                <a href="/profile.php">Profil</a>
+                <a href="/pokedex.php">Collection</a>
                 <a href="#">My Stories</a>
                 <a href="#">Categories</a>
             </nav>
