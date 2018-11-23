@@ -29,6 +29,12 @@
         <div class="menu-wrap">
             <nav class="menu-top">
                 <div class="profile"><img id="navProfilImg" src="/assets/images/Lexae.png" alt="Matthew Greenberg"/><span id="pseudoTitle"><?= $userConnected->pseudo; ?> - Maître de la Ligue</span></div>
+                <div class="icon-list">
+                    <a href="#"><i class="fa fa-fw fa-star-o"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-bell-o"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-envelope-o"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-comment-o"></i></a>
+                </div>
             </nav>
             <nav class="menu-side">
                 <a href="/profile.php">Profil</a>
