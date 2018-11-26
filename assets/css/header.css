@@ -314,10 +314,11 @@ main {
     height: 315px;
     background-color: white;
     margin: 20px;
+    border: 2px black solid;
 }
 
 .banner{
-    background: white;
+    background: #1a1a1a;
     height: 20px;
     position: absolute;
     bottom: 0px;
@@ -327,17 +328,18 @@ main {
 .triangleArcanin{
  height : 0;
  width : 0;
- border-bottom : 80px solid white;
- border-left : 220px solid transparent;
+ border-bottom-style: solid ;
+ border-bottom-width: 80px;
+ border-bottom-color: #1a1a1a;
+ border-left : 216px solid transparent;
     position:absolute; bottom:20px;
 }
 
 .pkmName{
-    position:absolute; bottom:0; left: 40%;
+    position:absolute; bottom:0; left: 35%;
 }
 
 .pkmName p{
-    color: black;
+    color: white;
     font-size: 25px;
-    font-family: 'Black Han Sans', sans-serif;
 }
