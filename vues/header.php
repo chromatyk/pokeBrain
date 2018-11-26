@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet"> 
         <link rel="icon" type="image/png" href="/assets/images/favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" />
@@ -40,8 +41,9 @@
             <nav class="menu-side">
                 <a href="/mon_profil/<?= $_SESSION['pseudo']?>">Profil</a>
                 <a href="/collection/<?= $_SESSION['pseudo']?>">Collection</a>
-                <a href="#">My Stories</a>
-                <a href="#">Categories</a>
+                <a href="#">Pokedex</a>
+                <a href="#">StreamLand</a>
+                <a href="#">Shasse</a>
             </nav>
         </div>
         <div class="contenu">
