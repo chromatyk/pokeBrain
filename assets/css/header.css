@@ -273,3 +273,71 @@ main {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
+.pkmCard{
+    position: relative;
+    width: 315px;
+    height: 220px;
+    background-color: white;
+    margin: 20px;
+}
+
+.banner{
+    background: white;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.triangle{
+ height : 0;
+ width : 0;
+ border-bottom : 80px solid white;
+ border-left : 315px solid transparent;
+    position:absolute; bottom:20px;
+}
+
+.pkmName{
+    position:absolute; bottom:0; left: 50%; color: black;
+}
+
+.pkmName p{
+    color: black;
+    font-size: 30px;
+}
+
+
+.pkmCardArcanin{
+    position: relative;
+    width: 220px;
+    height: 315px;
+    background-color: white;
+    margin: 20px;
+}
+
+.banner{
+    background: white;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.triangleArcanin{
+ height : 0;
+ width : 0;
+ border-bottom : 80px solid white;
+ border-left : 220px solid transparent;
+    position:absolute; bottom:20px;
+}
+
+.pkmName{
+    position:absolute; bottom:0; left: 40%;
+}
+
+.pkmName p{
+    color: black;
+    font-size: 25px;
+    font-family: 'Black Han Sans', sans-serif;
+}

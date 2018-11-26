@@ -8,12 +8,12 @@
     left: 150px;
     box-shadow: 10px 10px 20px 0px #202020;
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#202020, Direction=134, Strength=20);        border-bottom-left-radius: 15px;
--moz-border-radius-bottomleft: 15px;
--webkit-border-bottom-left-radius: 15px;
-border-bottom-right-radius: 15px;
--moz-border-radius-bottomright: 15px;
--webkit-border-bottom-right-radius: 15px;
-margin-bottom: 20px;
+    -moz-border-radius-bottomleft: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    margin-bottom: 20px;
 }
 
 .bannerParallax{
@@ -31,22 +31,23 @@ margin-bottom: 20px;
 }
 
 .profilePicture img{
-  width:100%;
-  height:100%;
-object-fit: cover; 
+    width:100%;
+    height:100%;
+    object-fit: cover; 
 }
 
 .profileInfos{
+    color: white;
     height-min: 10%;
     background: #373A47;
-            border-bottom-left-radius: 15px;
--moz-border-radius-bottomleft: 15px;
--webkit-border-bottom-left-radius: 15px;
-border-bottom-right-radius: 15px;
--moz-border-radius-bottomright: 15px;
--webkit-border-bottom-right-radius: 15px;
-padding-bottom: 20px;
-margin-bottom: 150px;
+    border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 150px;
 }
 
 #pseudo{
@@ -78,28 +79,28 @@ margin-bottom: 150px;
     position: absolute;
     width: 100%;
     height: 100%;
-  }
+}
 
-  .tile {
+.tile {
     width: 100%;
     height: 100%;
     overflow: hidden;
-  }
-  .card{
-      background-color: #484B58;
-      border:transparent;
-  }
-  .card-body{
-      background-color: #595C69;
-      border:transparent;
-  }
-  
+}
+.card{
+    background-color: #484B58;
+    border:transparent;
+}
+.card-body{
+    background-color: #595C69;
+    border:transparent;
+}
+
 .btn{
     cursor: pointer;
     color: white;
     padding: 0;
 }
-  .btn-link:hover{
+.btn-link:hover{
     box-shadow: none;
     color: #2E7AAB;
     text-decoration: none;
@@ -113,26 +114,26 @@ margin-bottom: 150px;
 #typePark{
     margin-bottom: 10px;
 }
-  @media screen and (max-width: 991px) {
-  .cardProfile{
-   display : none;
-}
+@media screen and (max-width: 991px) {
+    .cardProfile{
+        display : none;
+    }
 }
 @media screen and (min-width: 992px) and (max-width: 1594px) {
-  .cardProfile{
-    background: grey;
-    width: 18rem;
-    height: 50%;
-    position: absolute;
-    z-index: 200000000;
-    top: 150px;
-    left: 15px;
-    box-shadow: 10px 10px 20px 0px #202020;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#202020, Direction=134, Strength=20); border-bottom-left-radius: 15px;
--moz-border-radius-bottomleft: 15px;
--webkit-border-bottom-left-radius: 15px;
-border-bottom-right-radius: 15px;
--moz-border-radius-bottomright: 15px;
--webkit-border-bottom-right-radius: 15px;
-}
+    .cardProfile{
+        background: grey;
+        width: 18rem;
+        height: 50%;
+        position: absolute;
+        z-index: 200000000;
+        top: 150px;
+        left: 15px;
+        box-shadow: 10px 10px 20px 0px #202020;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#202020, Direction=134, Strength=20); border-bottom-left-radius: 15px;
+        -moz-border-radius-bottomleft: 15px;
+        -webkit-border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        -moz-border-radius-bottomright: 15px;
+        -webkit-border-bottom-right-radius: 15px;
+    }
 }
