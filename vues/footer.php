@@ -14,6 +14,7 @@
 <script src="/assets/js/ratio.js"></script>
 <script src="/assets/js/subscribe.js"></script>
 <script src="/assets/js/tilt.js" type="text/javascript"></script>
+<script src="/assets/js/modalPkm.js"></script>
 </body>
 </html>   
 

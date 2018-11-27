@@ -1,5 +1,5 @@
 .bgInscription{
-    background-image: url("../images/fonduq.jpg");
+    background-image: url("assets/images/fonduq.jpg");
 }
 
 .formInscription{
@@ -42,8 +42,7 @@ label{
 }
 	
 
-#gradient
-{
+#gradient{
   width: 100%;
   height: 1200px;
   padding: 0px;
