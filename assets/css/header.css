@@ -294,12 +294,12 @@ main {
 }
 
 .cardPkmName{
-    position:absolute; bottom:0; left: 50%; color: black;
+    position:absolute; bottom:0; left: 35%; color: black;
 }
 
 .cardPkmName p{
-    color: black;
-    font-size: 30px;
+    color: white;
+    font-size: 25px;
 }
 
 .banner{

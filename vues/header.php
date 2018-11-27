@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/header.css" />
         <link rel="stylesheet" type="text/css" href="/assets/css/profile.css" />
-        <link href="../assets/css/pokedex.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/css/collection.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 
@@ -41,7 +41,7 @@
             <nav class="menu-side">
                 <a href="/mon_profil/<?= $_SESSION['pseudo']?>">Profil</a>
                 <a href="/collection/<?= $_SESSION['pseudo']?>">Collection</a>
-                <a href="#">Pokedex</a>
+                <a href="/pokedex">Pokedex</a>
                 <a href="#">StreamLand</a>
                 <a href="#">Shasse</a>
             </nav>

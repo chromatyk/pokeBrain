@@ -18,7 +18,11 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                         if ($catchedPokemon->catchStatement == 1 && $catchedPokemon->idUser == $_SESSION['id']) {
                             ?>
                             <a href="#" id="boxGlobalPkm">
-                                <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#<?= $catchedPokemon->id ?>" style="background-image:url(/assets/pokeball/<?= $catchedPokemon->nameBall ?>.png);">
+                                <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#<?= $catchedPokemon->id ?>"
+                                <?php
+                                if (!empty($catchedPokemon->nameBall)) {
+                                    ?>style="background-image:url(/assets/pokeball/<?= $catchedPokemon->nameBall ?>.png);"><?php } else {
+                                    ?>style="background-image:url(/assets/pokeball/Poke.png);"><?php } ?>
                                     <div class="cardPokemon"><img src="/assets/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
                                     <div class="cardBall"></div>
                                     <div class="pkmName">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></div>
@@ -30,7 +34,11 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="row">
-                                                <img class="col-1 ballModal" src="/assets/minBall/<?=$catchedPokemon->nameBall?>.png">
+                                                <?php
+                                                if (!empty($catchedPokemon->nameBall)) {
+                                                    ?><img class="col-1 ballModal" src="/assets/minBall/<?= $catchedPokemon->nameBall ?>.png"><?php } else {
+                                                    ?><img class="col-1 ballModal" src="/assets/minBall/Poke.png"><?php } ?>
+
                                                 <p class="col-11" id="namePkmModal">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></p>                                              
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -39,7 +47,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                             <hr>       
                                             <div id="modal-body">
                                                 <div class="row">
-                                                    <img class="col-12 imgModal" src="/assets/gifBig/<?=$catchedPokemon->id?>.gif" style="max-width:350px; min-width: 350px;">                                                  
+                                                    <img class="col-12 imgModal" src="/assets/gifBig/<?= $catchedPokemon->id ?>.gif" style="max-width:350px; min-width: 350px;">                                                  
                                                 </div>
                                                 <br>
                                                 <p id="nickNameModal"><?= $catchedPokemon->nickName ?></p>
@@ -48,21 +56,21 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                                     <div class="col-4 categoriesModal">
                                                         <center><p> Charme Chroma : Avec</p></center>
                                                     </div>
-                                                    
+
                                                     <div class="col-4 categoriesModal">
                                                         <center><p> Version :<br> Let's Go Evoli</p></center>
                                                     </div>
-                                                    
+
                                                     <div class="col-4 categoriesModal">
                                                         <center><p> Méthode :<br> Chaîne parfaite</p></center>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="row">
                                                     <div class="col-6 categoriesModal">
                                                         <center><p> Nombres de rencontres :<br>10 853</p></center>
                                                     </div>
-                                                    
+
                                                     <div class="col-6 categoriesModal">
                                                         <center><p> Date de capture :<br> 18/05/2018 23:30:02</p></center>
                                                     </div>
