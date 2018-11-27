@@ -93,20 +93,23 @@ if (isset($_POST['validInscrip'])) {
     if (isset($_POST['friendCode']) && !empty($_POST['friendCode'])) {
         $user->friendCode = htmlspecialchars($_POST['friendCode']);
     }
-            /*
-             * On vérifie que le tableau d'érreur est  vide, si c'est le cas on ajout l'utilisateur
-             */
-            if (isset($_POST['validInscrip']) && count($formError) == 0) {
-                if (!$user->addUser()) {
-                    $formError['add'] = 'Erreur lors de l\'ajout';
-                } else {
-                    $formError['add'] = 'Inscription Validée';
-                    $formError['redirect'] = 'Vous allez êtres redirigé vers la page de connexion dans 3secs !';
-                    $insertSuccess = true;
-                    ?>
-                    <meta http-equiv="refresh" content="3;URL=connexion.php">
-                    <?php
-                }
-            }
+    /*
+     * On vérifie que le tableau d'érreur est  vide, si c'est le cas on ajout l'utilisateur
+     */
+    if (isset($_POST['validInscrip']) && count($formError) == 0) {
+        if (!$user->addUser()) {
+            $formError['add'] = 'Erreur lors de l\'ajout';
+        } else {
+            $formError['add'] = 'Inscription Validée';
+            $formError['redirect'] = 'Vous allez êtres redirigé vers la page de connexion dans 3secs !';
+            $insertSuccess = true;
+            $nbDirectory = $lastId->lastId;
+            $dossier = 'media/img/' . $nbDirectory . '/';
+            mkdir('media/img/' . $nbDirectory . '/', 0777, true);
+            ?>
+            <meta http-equiv="refresh" content="3;URL=connexion.php">
+            <?php
+        }
+    }
 }
 ?>

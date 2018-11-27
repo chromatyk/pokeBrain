@@ -9,7 +9,10 @@ if (isset($_GET['nbGen'])) {
         $thePokemon = new pokemons();
         $thePokemon->id = $nbPkm;
         $thePokemon = $thePokemon->getOnePokemon();
-        echo '<a href="/localisations/' . $thePokemon->nomPkm . '"><div class="pkmCardArcanin" style="background: url(\'assets/pokedexImage/' . $nbPkm . '.jpg\');"> <div class="banner"></div> <div class="triangleArcanin"></div> <div class="pkmName"><p>' . $thePokemon->nomPkm . '</p></div></div></a>';
+
+        echo '<span data-tilt><a href="/localisations/' . $thePokemon->nomPkm . '"><div class="pkmCardArcanin" style="background: url(\'assets/pokedexImage/' . $nbPkm . '.jpg\');"> <div class="banner"></div> <div class="triangleArcanin"></div> <div class="pkmName"><p>' . $thePokemon->nomPkm . '</p></div></div></a></span>';
+
+
     }
 } else {
     $thePokemon = new pokemons();
@@ -18,7 +21,10 @@ if (isset($_GET['nbGen'])) {
         $thePokemon = new pokemons();
         $thePokemon->id = $nbPkm;
         $thePokemon = $thePokemon->getOnePokemon();
+
         echo '<span data-tilt><a href="/localisations/' . $thePokemon->nomPkm . '"><div class="pkmCardArcanin" style="background: url(\'assets/pokedexImage/' . $nbPkm . '.jpg\');"> <div class="banner"></div> <div class="triangleArcanin"></div> <div class="pkmName"><p>' . $thePokemon->nomPkm . '</p></div></div></a></span>';
+
+
     }
 }
 ?>

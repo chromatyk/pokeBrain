@@ -40,6 +40,7 @@
     color: white;
     height-min: 10%;
     background: #373A47;
+<<<<<<< HEAD
     border-bottom-left-radius: 15px;
     -moz-border-radius-bottomleft: 15px;
     -webkit-border-bottom-left-radius: 15px;
@@ -48,6 +49,17 @@
     -webkit-border-bottom-right-radius: 15px;
     padding-bottom: 20px;
     margin-bottom: 150px;
+=======
+            border-bottom-left-radius: 15px;
+-moz-border-radius-bottomleft: 15px;
+-webkit-border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+-moz-border-radius-bottomright: 15px;
+-webkit-border-bottom-right-radius: 15px;
+padding-bottom: 20px;
+margin-bottom: 150px;
+color:white;
+>>>>>>> pierre
 }
 
 #pseudo{
@@ -67,8 +79,10 @@
     background: #373A47;
     padding-top : 30px;
     padding-bottom : 30px;
+    color : white;
 }
 .gen1{
+    color:white;
 }
 #biouser{
     word-wrap:break-word;
@@ -136,4 +150,26 @@
         -moz-border-radius-bottomright: 15px;
         -webkit-border-bottom-right-radius: 15px;
     }
+}
+#formPictures{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  z-index:100000000;
+  height:100%;
+  padding-top:75%
+}
+#formPictures:hover {
+  opacity: 1;
+}
+#validPictures{
+    background:#373A47;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
