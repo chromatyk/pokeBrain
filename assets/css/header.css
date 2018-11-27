@@ -276,45 +276,30 @@ main {
 
 .pkmCard{
     position: relative;
-    width: 315px;
-    height: 220px;
-    background-color: white;
-    margin: 20px;
-}
-
-.banner{
-    background: white;
-    height: 20px;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
-
-.triangle{
- height : 0;
- width : 0;
- border-bottom : 80px solid white;
- border-left : 315px solid transparent;
-    position:absolute; bottom:20px;
-}
-
-.pkmName{
-    position:absolute; bottom:0; left: 50%; color: black;
-}
-
-.pkmName p{
-    color: black;
-    font-size: 30px;
-}
-
-
-.pkmCardArcanin{
-    position: relative;
     width: 220px;
     height: 315px;
     background-color: white;
     margin: 20px;
     border: 2px black solid;
+}
+
+.triangle{
+ height : 0;
+ width : 0;
+ border-bottom-style: solid ;
+ border-bottom-width: 80px;
+ border-bottom-color: #1a1a1a;
+ border-left : 216px solid transparent;
+    position:absolute; bottom:20px;
+}
+
+.cardPkmName{
+    position:absolute; bottom:0; left: 50%; color: black;
+}
+
+.cardPkmName p{
+    color: black;
+    font-size: 30px;
 }
 
 .banner{
@@ -325,21 +310,3 @@ main {
     width: 100%;
 }
 
-.triangleArcanin{
- height : 0;
- width : 0;
- border-bottom-style: solid ;
- border-bottom-width: 80px;
- border-bottom-color: #1a1a1a;
- border-left : 216px solid transparent;
-    position:absolute; bottom:20px;
-}
-
-.pkmName{
-    position:absolute; bottom:0; left: 35%;
-}
-
-.pkmName p{
-    color: white;
-    font-size: 25px;
-}
