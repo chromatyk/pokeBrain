@@ -139,6 +139,20 @@ class pokemons extends dataBase {
         $getCatchedPokemonByIdUsers = $getCatchedPokemonByIdUsers->fetchAll(PDO::FETCH_OBJ);
         return $getCatchedPokemonByIdUsers;
     }
+    
+    public function getPokemonPage($offset) {
+        //On prépare la requête sql qui insert les champs sélectionnés, les valeurs de type :lastname sont des marqueurs nominatifs
+        $query = 'SELECT `id`,`nomPkm` FROM `pokemon` LIMIT 12 OFFSET :offset';
+        $pokemonPage = $this->db->prepare($query);
+        $pokemonPage->bindValue(':offset', $offset, PDO::PARAM_INT);
+        //Si l'insertion s'est correctement déroulée, on retourne true car execute() est un booléen
+        if ($pokemonPage->execute()) {
+            $pokemonPage = $pokemonPage->fetchAll(PDO::FETCH_OBJ);
+        } else {
+            $pokemonPage = false;
+        }
+        return $pokemonPage;
+    }
 
     public function __destruct() {
 
