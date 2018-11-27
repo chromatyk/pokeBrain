@@ -20,7 +20,11 @@ include 'controllers/updateImages.php';
         <div id="biouser"><?= $userConnected->bioUsers ?></div>
     </div>
 </div>
-<div class="tile" data-scale="1.05" data-image="/assets/images/banniere.png"></div>
+<div class="tile" data-scale="1.05" data-image="/assets/images/banniere.png"></div>    
+<form id="formBanner" action="" method="POST"  enctype="multipart/form-data">
+            <input type="file" name="profilePicture" id="file" required />
+            <button id="validPictures" type="submit" class="btn" name="updatePicture" value="Valider modification">Valider modification</button>
+        </form>
 <div class="safariPark col-xs-12 offset-lg-3 col-lg-8">
 <?php if (isset($finishedHuntByGen)) { ?>
         <p class="progressHunt">Progression globale : <?= $userConnected->nbUsersHunts ?> / 805 - <?= round($userConnected->nbUsersHunts / 805 * 100, 2); ?>%</p>
@@ -286,8 +290,6 @@ include 'controllers/updateImages.php';
         </div>
     </div>
 </div>
-<script src="/assets/js/parallax.js"></script>
-<script src="/assets/js/updateImages.js" type="text/javascript"></script>
 <?php
 include 'vues/footer.php';
 ?>

@@ -40,16 +40,6 @@
     color: white;
     height-min: 10%;
     background: #373A47;
-<<<<<<< HEAD
-    border-bottom-left-radius: 15px;
-    -moz-border-radius-bottomleft: 15px;
-    -webkit-border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    -moz-border-radius-bottomright: 15px;
-    -webkit-border-bottom-right-radius: 15px;
-    padding-bottom: 20px;
-    margin-bottom: 150px;
-=======
             border-bottom-left-radius: 15px;
 -moz-border-radius-bottomleft: 15px;
 -webkit-border-bottom-left-radius: 15px;
@@ -59,7 +49,6 @@ border-bottom-right-radius: 15px;
 padding-bottom: 20px;
 margin-bottom: 150px;
 color:white;
->>>>>>> pierre
 }
 
 #pseudo{
@@ -165,6 +154,23 @@ color:white;
   padding-top:75%
 }
 #formPictures:hover {
+  opacity: 1;
+}
+#formBanner{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width:75%;
+  left:50%;
+  top:0;
+  padding-top:330px;  
+  padding-bottom:125px;
+  height:500px;
+}
+#formBanner:hover {
   opacity: 1;
 }
 #validPictures{

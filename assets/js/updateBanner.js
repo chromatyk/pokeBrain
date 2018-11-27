@@ -59,4 +59,15 @@ $( "#formPictures" )
       opacity: "1"
     });
   });
+  $( "#formBanner" )
+  .on( "mouseenter", function() {
+    $( ".tile" ).css({
+      opacity: "0.3"
+    });
+  })
+  .on( "mouseleave", function() {
+    $( ".tile" ).css({
+      opacity: "1"
+    });
+  });
 });
