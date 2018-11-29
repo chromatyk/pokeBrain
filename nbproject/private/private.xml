@@ -12,10 +12,15 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/Projets/pokeBrain/controllers/usersInfos.php</file>
             <file>file:/D:/Projets/pokeBrain/models/hunts.php</file>
             <file>file:/D:/Projets/pokeBrain/models/users.php</file>
             <file>file:/D:/Projets/pokeBrain/profile.php</file>
+=======
+            <file>file:/D:/Projets/pokeBrain/localisation.php</file>
+            <file>file:/D:/Projets/pokeBrain/assets/css/header.css</file>
+>>>>>>> 34080211893f95fb79f7dfd9c68411398386a299
         </group>
     </open-files>
 </project-private>
