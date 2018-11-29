@@ -318,7 +318,7 @@ main {
     width: 200px;
 }
 
-#target {
+.targetDiv {
     position: absolute;
   background:#0099cc;
   width:100%;
