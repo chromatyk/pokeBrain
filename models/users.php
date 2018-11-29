@@ -23,7 +23,7 @@ class users extends dataBase {
      * Méthode permettant d'obtenirtoute les informations de l'utilisateur connecté
      */
     public function connectedInfos() {
-        $userConnected = $this->db->prepare('SELECT `users`.`id`, `users`.`pseudo`, `users`.`password`, `users`.`friendCode`, `users`.`bioUsers`, `users`.`profilePicture`, `users`.`email`, COUNT(hunts.id) AS `nbUsersHunts` FROM users INNER JOIN `hunts` ON `users`.`id` = `hunts`.`idUser` WHERE users.id = :id AND hunts.catchStatement = 1');
+        $userConnected = $this->db->prepare('SELECT `users`.`id`, `users`.`pseudo`, `users`.`password`, `users`.`friendCode`, `users`.`bioUsers`, `users`.`profilePicture`, `users`.`email`, COUNT(DISTINCT hunts.idPokemon) AS `nbUsersHunts` FROM users INNER JOIN `hunts` ON `users`.`id` = `hunts`.`idUser` WHERE users.id = :id AND hunts.catchStatement = 1');
         $userConnected->bindValue(':id', $this->id, PDO::PARAM_STR);
         if ($userConnected->execute()) {
             $userConnectedInfos = $userConnected->fetch(PDO::FETCH_OBJ);

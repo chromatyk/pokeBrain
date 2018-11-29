@@ -151,7 +151,7 @@ class hunts extends dataBase {
      */
     public function countFinishedHuntByGen() {
         //On prépare la requête sql qui insert les champs sélectionnés, les valeurs de type :lastname sont des marqueurs nominatifs
-        $query = 'SELECT COUNT(hunts.id) AS numberOfFinishedHunt, pokemon.idGen FROM hunts INNER JOIN pokemon ON pokemon.id = hunts.idPokemon WHERE hunts.idUser = :idUser AND hunts.catchStatement = 1 GROUP BY pokemon.idGen';
+        $query = 'SELECT COUNT(DISTINCT hunts.idPokemon) AS numberOfFinishedHunt, pokemon.idGen FROM hunts INNER JOIN pokemon ON pokemon.id = hunts.idPokemon WHERE hunts.idUser = :idUser AND hunts.catchStatement = 1 GROUP BY pokemon.idGen';
         $finishedHuntListByGen = $this->db->prepare($query);
         $finishedHuntListByGen->bindValue(':idUser', $this->idUser, PDO::PARAM_INT);
         //Si l'insertion s'est correctement déroulée, on retourne true car execute() est un booléen
