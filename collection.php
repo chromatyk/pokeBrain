@@ -7,7 +7,10 @@ include 'controllers/livingDexController.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
     ?>
     <div class="container bodyPage">
-        <h1 class="titlePokedex">Pokédex de <?= $_SESSION['pseudo'] ?></h1>
+        <div class="row addButton">
+            <h1 class="titlePokedex offset-lg-4">Pokédex de <?= $_SESSION['pseudo'] ?></h1>
+            <div class="button btn-5"><p>Ajout</p></div>
+        </div>
         <div id="pokedex" class="row pokedexRow">
             <?php
             foreach ($catchedPokemon as $catchedPokemon) {
@@ -21,9 +24,9 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                 <div id="cardPkm" class="cardPkm" data-toggle="modal" data-target="#<?= $catchedPokemon->id ?>"
                                 <?php
                                 if (!empty($catchedPokemon->nameBall)) {
-                                    ?>style="background-image:url(/assets/pokeball/<?= $catchedPokemon->nameBall ?>.png);"><?php } else {
+                                    ?>style="background-image:url(/assets/images/pokeball/<?= $catchedPokemon->nameBall ?>.png);"><?php } else {
                                     ?>style="background-image:url(/assets/pokeball/Poke.png);"><?php } ?>
-                                    <div class="cardPokemon"><img src="/assets/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
+                                    <div class="cardPokemon"><img src="/assets/images/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
                                     <div class="cardBall"></div>
                                     <div class="pkmName">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></div>
                                     <div class="pkmNickname"><?= $catchedPokemon->nickName ?></div>
@@ -36,8 +39,8 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                             <div class="row">
                                                 <?php
                                                 if (!empty($catchedPokemon->nameBall)) {
-                                                    ?><img class="col-1 ballModal" src="/assets/minBall/<?= $catchedPokemon->nameBall ?>.png"><?php } else {
-                                                    ?><img class="col-1 ballModal" src="/assets/minBall/Poke.png"><?php } ?>
+                                                    ?><img class="col-1 ballModal" src="/assets/images/minBall/<?= $catchedPokemon->nameBall ?>.png"><?php } else {
+                                                    ?><img class="col-1 ballModal" src="/assets/images/minBall/Poke.png"><?php } ?>
 
                                                 <p class="col-11" id="namePkmModal">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></p>                                              
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -47,7 +50,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                             <hr>       
                                             <div id="modal-body">
                                                 <div class="row">
-                                                    <img class="col-12 imgModal" src="/assets/gifBig/<?= $catchedPokemon->id ?>.gif" style="max-width:350px; min-width: 350px;">                                                  
+                                                    <img class="col-12 imgModal" src="/assets/images/gifBig/<?= $catchedPokemon->id ?>.gif" style="max-width:350px; min-width: 350px;">                                                  
                                                 </div>
                                                 <br>
                                                 <p id="nickNameModal"><?= $catchedPokemon->nickName ?></p>
