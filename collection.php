@@ -7,9 +7,9 @@ include 'controllers/livingDexController.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
     ?>
     <div class="container bodyPage">
-        <div class="row addButton">
+        <div class="row pokedexName">
             <h1 class="titlePokedex offset-lg-4">Pokédex de <?= $_SESSION['pseudo'] ?></h1>
-            <div class="button btn-5"><p>Ajout</p></div>
+            <div class="addButton"><div class="textAdd">Ajout</div></div>
         </div>
         <div id="pokedex" class="row pokedexRow">
             <?php
