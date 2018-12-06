@@ -2,6 +2,7 @@
 include 'vues/header.php';
 include 'controllers/updateImages.php';
 ?>
+<div id="anim"></div>
 <div class="cardProfile">
     <div class="profilePicture">
         <img id="previewing" src="<?php if (!empty($userConnected->profilePicture)) { ?>/media/img/<?= $userConnected->id ?>/<?= $userConnected->profilePicture;
@@ -20,10 +21,11 @@ include 'controllers/updateImages.php';
         <div id="biouser"><?= $userConnected->bioUsers ?></div>
     </div>
 </div>
-<div class="tile" data-scale="1.05" data-image="/assets/images/banniere.png"></div>    
+<div class="tile" data-scale="1.05" data-image="<?php if (!empty($userConnected->profilePicture)) { ?>/media/banner/<?= $userConnected->id ?>/<?= $userConnected->bannerPicture;
+} else { ?>/assets/images/empty.jpg<?php } ?> "></div>    
 <form id="formBanner" action="" method="POST"  enctype="multipart/form-data">
-            <input type="file" name="profilePicture" id="file" required />
-            <button id="validPictures" type="submit" class="btn" name="updatePicture" value="Valider modification">Valider modification</button>
+            <input type="file" name="bannerPictures" id="file" required />
+            <button id="validPictures" type="submit" class="btn" name="updateBanner" value="Valider modification">Valider modification</button>
         </form>
 <div class="safariPark col-xs-12 offset-lg-3 col-lg-8">
 <?php if (isset($finishedHuntByGen)) { ?>
