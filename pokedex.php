@@ -9,14 +9,24 @@ include_once 'models/hunts.php';
         <?php
         include 'controllers/showPokemonOnPokedex.php';
         foreach ($pokemonPagination as $pokemonPaginations) {
-            ?>
-            <span data-tilt><div class="pkmCard showSingle" target="<?= $pokemonPaginations->id ?>" style="background: url('assets/images/pokedexImage/<?= $pokemonPaginations->id ?>.jpg');"> <div class="banner"></div> <div class="triangle"></div> <div class="cardPkmName"><p><?= $pokemonPaginations->nomPkm ?></p></div></div></span>
-            <div class="targetDiv" id="div<?= $pokemonPaginations->id ?>">
-                <button class="Hide">Hide</button>
-                <div class="row">
-                    <div class="col-xs-2">
-                        <img src="assets/images/gifBig/<?= $pokemonPaginations->id ?>.gif">
+            ?>        
+            <span data-toggle="modal" data-target="#<?= $pokemonPaginations->nomPkm ?>" data-tilt>
+                <div class="pkmCard showSingle" target="<?= $pokemonPaginations->id ?>" style="background: url('assets/images/pokedexImage/<?= $pokemonPaginations->id ?>.jpg');"> 
+                    <div class="banner"></div> 
+                    <div class="triangle"></div> 
+                    <div class="cardPkmName">
+                        <p><?= $pokemonPaginations->nomPkm ?></p>
                     </div>
+                </div>
+            </span>
+            <div class="modal fade modalPkm " id="<?= $pokemonPaginations->nomPkm ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div id=""  class="modal-dialog contentModalpokedex" role="document">                                        > 
+                    <div class="modal-content contentModalpokedex" role="document">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="/assets/images/splashart/<?= $pokemonPaginations->id ?>.png" style="width:200px">
+                    </div>                       
                 </div>
             </div>
         <?php } ?>
@@ -52,26 +62,23 @@ include_once 'models/hunts.php';
 //Do something
                 break;
             case arrowLeft:
-                document.location.href = "pokedex?page=<?= $page - 1 ?>";
+                
+    <?php if ($page > 1) { ?>
+                    document.location.href = "pokedex?page=<?= $page - 1 ?>";
+    <?php
+}
+?>
                 break;
             case arrowRight:
-                document.location.href = "pokedex?page=<?= $page + 1 ?>";
+    <?php if ($page < $maxPagination) { ?>
+                    document.location.href = "pokedex?page=<?= $page + 1 ?>";
+    <?php
+}
+?>
                 break;
         }
     }
 
     document.onkeydown = keyHandler;
-</script>
-
-<script>
-        jQuery('.showSingle').click(function(){
-              jQuery('.targetDiv').hide();
-              jQuery('#div'+$(this).attr('target')).show();
-        });
-        
-                jQuery('.Hide').click(function(){
-              jQuery('.targetDiv').hide();
-              jQuery('#div'+$(this).attr('target')).hide();
-        });
 </script>
 <?php include 'vues/footer.php' ?>
