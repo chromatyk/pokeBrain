@@ -25,7 +25,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                 <?php
                                 if (!empty($catchedPokemon->nameBall)) {
                                     ?>style="background-image:url(/assets/images/pokeball/<?= $catchedPokemon->nameBall ?>.png);"><?php } else {
-                                    ?>style="background-image:url(/assets/pokeball/Poke.png);"><?php } ?>
+                                    ?>style="background-image:url(/assets/images/pokeball/Poke.png);"><?php } ?>
                                     <div class="cardPokemon"><img src="/assets/images/shinyGif/<?= $catchedPokemon->nomPkm ?>.png"></div>
                                     <div class="cardBall"></div>
                                     <div class="pkmName">#<?= $catchedPokemon->id ?> - <?= $catchedPokemon->nomPkm ?></div>
@@ -50,7 +50,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                                             <hr>       
                                             <div id="modal-body">
                                                 <div class="row">
-                                                    <img class="col-12 imgModal" src="/assets/images/gifBig/<?= $catchedPokemon->id ?>.gif" style="max-width:350px; min-width: 350px;">                                                  
+                                                    <img class="col-12 imgModal" src="/assets/images/gifBig/<?= $catchedPokemon->id ?>.gif" style="max-width:100px; min-width: 300px;">                                                  
                                                 </div>
                                                 <br>
                                                 <p id="nickNameModal"><?= $catchedPokemon->nickName ?></p>

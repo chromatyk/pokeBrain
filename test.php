@@ -3,7 +3,17 @@ include_once 'vues/header.php';
 include_once 'models/dataBase.php';
 include_once 'models/pokemons.php';
 include_once 'models/versions.php';
+include_once 'models/hunts.php';
+include_once 'controllers/huntController.php';
 ?>
+<script src="assets/js/methodShasse.js"></script>
+<button id="test">Test</button>
+<?php 
+include_once 'vues/huntHub.php';
+include_once 'vues/footer.php';
+?>
+<<<<<<< HEAD
+=======
 <html>
 <head>
 <title>Ajax Image Upload Using PHP and jQuery</title>
@@ -18,3 +28,4 @@ include_once 'models/versions.php';
 <script src="script.js"></script>
 </body>
 </html>
+>>>>>>> 00cdcc7498b3dd628adc3ea7476c2906ee440fd0
