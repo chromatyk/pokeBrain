@@ -53,13 +53,13 @@ include 'controllers/updateImages.php';
         <center><div id = "safariHub">
                 <div class = "col-xs-10 col-sm-11 col-md-9 col-lg-10">
                     <p id = "friendPark" >Safari Ami </p>
-                    <center><img id = "typePark" src = "/assets/spriteSafari/<?= $safaryFriend->type ?>.png"/></center>
+                    <center><img id = "typePark" src = "/assets/images/spriteSafari/<?= $safaryFriend->type ?>.png"/></center>
                 </div>
                 <div class = "col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-10 col-md-offset-0 col-md-9 col-lg-offset-0 col-lg-10">
                     <span id = "pkmPark">
-                        <img src = "/assets/spriteSafari/<?= $safaryFriend->firstPokemon ?>.png"/>
-                        <img src = "/assets/spriteSafari/<?= $safaryFriend->secondPokemon ?>.png"/>
-                        <img src = "/assets/spriteSafari/<?= $safaryFriend->thirdPokemon ?>.png"/>
+                        <img src = "/assets/images/spriteSafari/<?= $safaryFriend->firstPokemon ?>.png"/>
+                        <img src = "/assets/images/spriteSafari/<?= $safaryFriend->secondPokemon ?>.png"/>
+                        <img src = "/assets/images/spriteSafari/<?= $safaryFriend->thirdPokemon ?>.png"/>
                     </span>
                 </div>
             </div></center>

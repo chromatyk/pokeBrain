@@ -1,8 +1,6 @@
 .titlePokedex{
     color: white;
     text-align: center;
-    padding-top: 10%;
-    margin-bottom: 5%;
 }
 
 .cardPkm{
@@ -25,8 +23,6 @@
     z-index: 101; 
     line-height: 210px; 
     text-align: center;
-}
-.cardBall{
 }
 
 .pkmName{
@@ -97,4 +93,25 @@ hr{
         left : 10px;
         top:20px;
     }
+}
+
+.addButton {
+    width: 80px;
+    height: 80px;
+    border: 2px green solid;
+    border-radius: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.pokedexName {
+    padding-top: 10%;
+    margin-bottom: 5%;
+}
+
+.textAdd{
+    position: relative;
+    top: 30%;
+    left: 25%;
+    color: white;
 }
