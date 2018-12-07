@@ -336,3 +336,75 @@ main {
     max-width: 100%;
     height: 100%;
 }
+
+.nbNamePkmDex{
+    color:White;
+    font-size: 50px;
+}
+
+.closeModDex{
+    color:white;
+    font-size: 60px;
+    width: 70px;
+    margin-left: 80%;
+}
+
+
+
+.nextPreviousTable{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+}
+.linkPagePkm{
+    font-size:25px;
+}
+.linkPagePkm:focus, .linkPagePkm:hover{
+    color : White;
+    font-size:30px;
+    text-decoration: none;
+    
+}
+#beginShasse{
+    margin-left: 37%;
+}
+#currentPkm{
+    text-align: center;
+}
+#nextButton{
+    float: left;
+}
+#previousButton{
+    float: right;
+}
+#splashArt{
+    display: block;
+    margin: auto;
+    width:200px;
+}
+.tablo{
+    float-left: 0px;
+}
+#tableLocal{
+    width:100%;
+    color:White;
+}
+td{
+    padding-left : 10px;
+}
+#headTableLocal{
+    text-align : center;
+    font-size : 40px;
+    color: White;
+}
+#bodyTableLocal{
+    width : 20%;
+    height:100px;
+}
+@media screen and (min-width : 300px) and (max-width : 767px){
+    .nextPreviousTable{
+        margin-top: 20px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+}
