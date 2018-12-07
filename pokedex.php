@@ -4,6 +4,8 @@ include_once 'models/dataBase.php';
 include_once 'models/pokemons.php';
 include_once 'models/hunts.php';
 ?>
+<script src="assets/js/versionsGenerationsLocal.js"></script>
+
 <div class="container bodyPage">
     <div class="row">
         <?php
@@ -20,12 +22,51 @@ include_once 'models/hunts.php';
                 </div>
             </span>
             <div class="modal fade modalPkm " id="<?= $pokemonPaginations->nomPkm ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                
                 <div id=""  class="modal-dialog contentModalpokedex" role="document">                                        > 
                     <div class="modal-content contentModalpokedex" role="document">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close closeModDex" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <img src="/assets/images/splashart/<?= $pokemonPaginations->id ?>.png" style="width:200px">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <p class="offset-5 nbNamePkmDex">#<?= $pokemonPaginations->id ?> - <?= $pokemonPaginations->nomPkm ?></p>
+                            </div>
+                            <div class="row">
+                                    <div class="offset-2 col-2">
+                                        <p style="font-size:30px;color:white">Générations<p/>
+                                    </div>
+                                    <p id="numberGneration"></p>
+                                    <div class="col-lg-5">
+                                        <small><a href="#" nbGen="1" class="linkPagePkm">1</a></small>
+                                        <small><a href="#" nbGen="2" class="linkPagePkm">2</a></small>
+                                        <small><a href="#" nbGen="3" class="linkPagePkm">3</a></small>
+                                        <small><a href="#" nbGen="4" class="linkPagePkm">4</a></small>
+                                        <small><a href="#" nbGen="5" class="linkPagePkm">5</a></small>
+                                        <small><a href="#" nbGen="6" class="linkPagePkm">6</a></small>
+                                        <small><a href="#" nbGen="7" class="linkPagePkm">7</a></small>
+                                    </div>                               
+                            </div>
+                            <div class="row">
+                                <div class="col-7">
+                                    <table id="tableLocal" border="1">
+                                        <div>
+                                            <thead>
+                                                <tr>
+                                                    <td colspan=3 id="headTableLocal">Localisation</td>
+                                                </tr>
+                                            </thead>
+                                        </div>
+                                        <tbody class="bodyTable" idPkmAtt="<?= $pokemonPaginations->id ?>">
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <img class="col-5" src="/assets/images/splashart/<?= $pokemonPaginations->id ?>.png" style="position:relative;top:-100px">
+
+                            </div>
+                            <div class="row">
+                            </div> 
+                        </div>                        
                     </div>                       
                 </div>
             </div>
@@ -62,15 +103,15 @@ include_once 'models/hunts.php';
 //Do something
                 break;
             case arrowLeft:
-                
-    <?php if ($page > 1) { ?>
+
+<?php if ($page > 1) { ?>
                     document.location.href = "pokedex?page=<?= $page - 1 ?>";
     <?php
 }
 ?>
                 break;
             case arrowRight:
-    <?php if ($page < $maxPagination) { ?>
+<?php if ($page < $maxPagination) { ?>
                     document.location.href = "pokedex?page=<?= $page + 1 ?>";
     <?php
 }
