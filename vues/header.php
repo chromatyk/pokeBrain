@@ -41,7 +41,7 @@
             </nav>
             <nav class="menu-side">
                 <a href="/mon_profil/<?= $_SESSION['pseudo']?>">Profil</a>
-                <a href="/collection/<?= $_SESSION['pseudo']?>">Collection</a>
+                <a href="/collection.php">Collection</a>
                 <a href="/pokedex">Pokedex</a>
                 <a href="#">StreamLand</a>
                 <a href="#">Shasse</a>

@@ -3,14 +3,42 @@ include_once 'vues/header.php';
 include_once 'models/dataBase.php';
 include_once 'models/pokemons.php';
 include_once 'models/hunts.php';
+include_once 'models/versions.php';
 include 'controllers/livingDexController.php';
+include_once 'controllers/huntController.php';?>
+<script src="assets/js/methodShasse.js"></script>
+<?php
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
     ?>
-    <div class="container bodyPage">
+    <div class="container bodyPage pokedexModal">
         <div class="row pokedexName">
             <h1 class="titlePokedex offset-lg-4">Pokédex de <?= $_SESSION['pseudo'] ?></h1>
-            <div class="addButton"><div class="textAdd">Ajout</div></div>
+            <div class="addButton" data-toggle="modal" data-target="#exampleModalCenter"><div class="textAdd">Ajout</div></div>
         </div>
+
+
+
+        <!-- Modal -->
+<!--        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">-->
+
+
+
+
+
+<!--
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+
+
+<?php include_once 'vues/huntHub.php'; ?>
+
+
         <div id="pokedex" class="row pokedexRow">
             <?php
             foreach ($catchedPokemon as $catchedPokemon) {
