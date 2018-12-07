@@ -1,7 +1,7 @@
 $(function() {
     $("#versionSelected").change(function() {
         var version = $('#versionSelected').val();
-        $.post('/controllers/methodHuntScript.php',
+        $.post('controllers/methodHuntScript.php',
                 {
                     methods: version
                 }, // Un script PHP que l'on va créer juste après
