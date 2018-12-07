@@ -52,26 +52,23 @@ include_once 'models/hunts.php';
 //Do something
                 break;
             case arrowLeft:
-                document.location.href = "pokedex?page=<?= $page - 1 ?>";
+                
+    <?php if ($page > 1) { ?>
+                    document.location.href = "pokedex?page=<?= $page - 1 ?>";
+    <?php
+}
+?>
                 break;
             case arrowRight:
-                document.location.href = "pokedex?page=<?= $page + 1 ?>";
+    <?php if ($page < $maxPagination) { ?>
+                    document.location.href = "pokedex?page=<?= $page + 1 ?>";
+    <?php
+}
+?>
                 break;
         }
     }
 
     document.onkeydown = keyHandler;
-</script>
-
-<script>
-        jQuery('.showSingle').click(function(){
-              jQuery('.targetDiv').hide();
-              jQuery('#div'+$(this).attr('target')).show();
-        });
-        
-                jQuery('.Hide').click(function(){
-              jQuery('.targetDiv').hide();
-              jQuery('#div'+$(this).attr('target')).hide();
-        });
 </script>
 <?php include 'vues/footer.php' ?>

@@ -5,6 +5,7 @@ class users extends dataBase {
     public $email = '';
     public $password = '';
     public $profilePicture = '';
+    public $banner = '';
     public $friendCode = '';
     public $bioUsers = '';
     public function __construct() {
@@ -23,7 +24,7 @@ class users extends dataBase {
      * Méthode permettant d'obtenirtoute les informations de l'utilisateur connecté
      */
     public function connectedInfos() {
-        $userConnected = $this->db->prepare('SELECT `users`.`id`, `users`.`pseudo`, `users`.`password`, `users`.`friendCode`, `users`.`bioUsers`, `users`.`profilePicture`, `users`.`email`, COUNT(DISTINCT hunts.idPokemon) AS `nbUsersHunts` FROM users INNER JOIN `hunts` ON `users`.`id` = `hunts`.`idUser` WHERE users.id = :id AND hunts.catchStatement = 1');
+        $userConnected = $this->db->prepare('SELECT `users`.`bannerPicture`, `users`.`id`, `users`.`pseudo`, `users`.`password`, `users`.`friendCode`, `users`.`bioUsers`, `users`.`profilePicture`, `users`.`email`, COUNT(DISTINCT hunts.idPokemon) AS `nbUsersHunts` FROM users INNER JOIN `hunts` ON `users`.`id` = `hunts`.`idUser` WHERE users.id = :id AND hunts.catchStatement = 1');
         $userConnected->bindValue(':id', $this->id, PDO::PARAM_STR);
         if ($userConnected->execute()) {
             $userConnectedInfos = $userConnected->fetch(PDO::FETCH_OBJ);
@@ -137,6 +138,16 @@ class users extends dataBase {
         $updateProfilePicture->bindValue(':profilePicture', $this->profilePicture, PDO::PARAM_STR);
         //Si l'insertion s'est correctement déroulée on retourne vrai
         return $updateProfilePicture->execute();
+    }
+    
+    public function updateBanner() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'UPDATE users SET bannerPicture = :banner WHERE id = :id';
+        $updateBanner = $this->db->prepare($query);
+        $updateBanner->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $updateBanner->bindValue(':banner', $this->banner, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $updateBanner->execute();
     }
     /*
      * Méthode permettant de modifier le ot de passe de l'utilisateur
